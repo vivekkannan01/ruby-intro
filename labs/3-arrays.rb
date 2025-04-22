@@ -15,3 +15,19 @@
 # HINTS
 # Learn to read the documentation!
 # https://ruby-doc.org/core-2.7.0/Array.html
+
+shopping_list1 = ["milk", "eggs", "bacon"]
+shopping_list2 = ["beer", "cookies", "apples", "milk"]
+
+puts ""
+puts "My Shopping List:"
+puts shopping_list1
+puts ""
+puts "My Friend's Shopping List:"
+puts shopping_list2
+puts ""
+puts "Combined List:"
+
+shopping_list = shopping_list1 + shopping_list2
+sorted_list = shopping_list.sort
+puts sorted_list.uniq
