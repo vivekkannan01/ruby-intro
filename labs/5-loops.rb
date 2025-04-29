@@ -19,6 +19,54 @@ spades = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 # King of Spades
 # Ace of Spades
 
+#ATTEMPT-1
+# index = 0
+# loop do
+#     if index == clubs.count
+#         break
+#     end
+#     puts "#{clubs[index]} of Clubs"
+#     index = index + 1
+#  end 
+
+#  index = 0
+#  loop do
+#      if index == diamonds.count
+#          break
+#      end
+#      puts "#{diamonds[index]} of Diamonds"
+#      index = index + 1
+#   end 
+
+#   index = 0
+# loop do
+#     if index == hearts.count
+#         break
+#     end
+#     puts "#{hearts[index]} of Hearts"
+#     index = index + 1
+#  end 
+
+#  index = 0
+# loop do
+#     if index == spades.count
+#         break
+#     end
+#     puts "#{spades[index]} of Spades"
+#     index = index + 1
+#  end 
+
+
+#ATTEMPT-2
+#  for rank in clubs
+#     puts "#{rank} of Clubs"
+#     puts "#{rank} of Diamonds"
+#     puts "#{rank} of Hearts"
+#     puts "#{rank} of Spades"
+#   end
+
+#----------------------------------------------------------------------------------------------------
+
 # CHALLENGE #1
 # The arrays are identical for each suit and can be simplified by using
 # a ranks array as seen below. Try to complete the exercise again by
@@ -26,6 +74,44 @@ spades = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 
+#ATTEMPT-1
+# index = 0
+# loop do
+#     if index == suits.count
+#         break
+#     end
+#     for rank in clubs
+#         puts "#{rank} of #{suits[index]}"
+#     end
+#     index = index + 1
+#  end 
+
+
+#ATTEMPT-2
+#  for rank in ranks
+#     for suit in suits
+#       puts "#{rank} of #{suit}"
+#     end
+#   end
+
+#----------------------------------------------------------------------------------------------------
+
 # CHALLENGE #2
 # Deal a poker hand. Shuffle the deck and "deal" (i.e. display) a 5 card hand (i.e. 5 cards from the deck).
 # You will want to look at the documentation for Arrays: https://ruby-doc.org/core-2.7.0/Array.html
+
+deck = []
+
+for rank in ranks
+    for suit in suits
+      card = "#{rank} of #{suit}"
+      deck.push(card)
+    end
+  end
+
+shuffled_deck = deck.shuffle
+hand = shuffled_deck[0,5]
+
+for card in hand
+    puts card
+  end
